@@ -4,43 +4,89 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
+/*
+#007F4B
+#32FFAB
+#00FF97
+#347F61
+#00CC79
+*/
+
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    padding-top: 70px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    color: #484848;
 }
 
 footer {
     margin: 50px 0;
 }
 
-.post{
+.post {
     border: 1px solid #d9d9d9;
     padding: 15px;
     margin: 20px 0px;
 }
 
-.title{
-    display: block;
+.btn-green {
+    background: #00CC79;
+    color: #fff;
+}
+
+.btn-green:hover {
+    color: #fff;
+    background: #007F4B;
+}
+
+.header-post {
+    background: #00CC79;
+    display: table;
+    width: 100%;
+    min-height: 100px;
+}
+
+.title {
     font-size: 2.3em;
+    padding-left: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.date-title {
+    background: #007F4B;
+    color: #fff;
+    width: 80px;
+    border-right: 5px solid #fff;
+    display: table-cell;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Lucida Sans', sans-serif;
+    vertical-align: middle;
+}
+
+.img-post {
     margin-bottom: 15px;
 }
 
-.img-post{
-    margin-bottom: 15px;
-}
-
-.lead{
+.lead {
     display: inline-block;
 }
 
-.dropdown{
+.dropdown {
     display: inline-block;
 }
 
-a:hover, a:focus, a:active {
-  border: 2px solid green;
-  text-decoration: none;
+a {
+    color: inherit;
 }
 
-.link-ace{
-    
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }
+
+.link-ace {}
