@@ -23,14 +23,34 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script>
+        var focusM = function (el) {
+            el.focus();
+        }
+    </script>
 </head>
 
-<body>
+<body onload="focusM(this)">
 
+    <!-- First Blog Post
+            LANCE PRA DAOTONICO
+            FUNCAO JAVASCRIPT PRA CRIAR ORDEM DE TAB
+            Passar por todos titulos primeiro via tab, e entrar numa classe post com algum comando
+            DENTRO DO POST
+                <p class="lead">
+                    by <a href="index.php">Start Bootstrap</a>
+                </p>
+                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+
+                https://www.w3schools.com/tags/ref_standardattributes.asp
+                standart atttributes global para acessibilidade
+
+                http://www.adeva.org.br/servicos/acessibilidadedesites.php
+             -->
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" tabindex="1">
+        <div class="container" tabindex="-1">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -73,152 +93,132 @@
                     <small>Secondary Text</small>
                 </h1>
 
-                <!-- First Blog Post
-            LANCE PRA DAOTONICO
-            FUNCAO JAVASCRIPT PRA CRIAR ORDEM DE TAB
-            Passar por todos titulos primeiro via tab, e entrar numa classe post com algum comando
-            DENTRO DO POST
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-
-                https://www.w3schools.com/tags/ref_standardattributes.asp
-                standart atttributes global para acessibilidade
-
-                http://www.adeva.org.br/servicos/acessibilidadedesites.php
-             -->
-                <div class="post">
-                    <header class="header-post">
-                        <span class="date-title">
+                <section class="__posts" tabindex="2">
+                    <div class="post" tabindex="-1">
+                        <header class="header-post">
+                            <span class="date-title">
                             <span>26</span>
-                        <span>Maio</span>
-                        <span>2017</span>
-                        </span>
-                        <span class="title">
+                            <span>Maio</span>
+                            <span>2017</span>
+                            </span>
+                            <span class="title">
                             <a href="#" alt="Introdução ao Docker">Introdução ao Docker</a>
                         </span>
-                    </header>
+                        </header>
 
-                    <img class="img-post img-responsive" src="imgs/back_estrutura_html.jpg" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
-
-
-                    <p class="resumo">
-                        <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
-                    tempora,
-                    necessitatibus
-                    inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti
-                    debitis
-                    ipsum officiis rerum.</a>
-                    </p>
+                        <img class="img-post img-responsive" src="imgs/back_estrutura_html.jpg" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir"
+                        />
 
 
-                    <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span
-                        class="glyphicon glyphicon-chevron-right"></span></a>
+                        <p class="resumo">
+                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
+                        </p>
 
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                        Opções <span class="caret"></span>
-                    </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                        </ul>
+
+                        <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                Opções <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <div class="post">
-                    <header class="header-post">
-                        <span class="date-title">
+                    <div class="post" tabindex="-1">
+                        <header class="header-post">
+                            <span class="date-title">
                             <span>26</span>
-                        <span>Maio</span>
-                        <span>2017</span>
-                        </span>
-                        <span class="title">
+                            <span>Maio</span>
+                            <span>2017</span>
+                            </span>
+                            <span class="title">
                             <a href="#" alt="Introdução ao Docker">Introdução ao Docker</a>
                         </span>
-                    </header>
-                    <img class="img-post img-responsive" src="http://placehold.it/900x300" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
+                        </header>
+                        <img class="img-post img-responsive" src="http://placehold.it/900x300" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
 
 
-                    <p class="resumo">
-                        <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
-                    tempora,
-                    necessitatibus
-                    inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti
-                    debitis
-                    ipsum officiis rerum.</a>
-                    </p>
+                        <p class="resumo">
+                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
+                        </a>
+                        </p>
 
 
-                    <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span
+                        <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span
                         class="glyphicon glyphicon-chevron-right"></span></a>
 
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                        Opções <span class="caret"></span>
-                    </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                        </ul>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                                    Opções <span class="caret"></span>
+                                </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="post">
-                    <header class="header-post">
-                        <span class="date-title">
+                    <div class="post" tabindex="-1">
+                        <header class="header-post">
+                            <span class="date-title">
                             <span>26</span>
-                        <span>Maio</span>
-                        <span>2017</span>
-                        </span>
-                        <span class="title">
+                            <span>Maio</span>
+                            <span>2017</span>
+                            </span>
+                            <span class="title">
                             <a href="#" alt="Introdução ao Docker">Introdução ao Docker</a>
                         </span>
-                    </header>
-                    <img class="img-post img-responsive" src="imgs/5min_editores_texto.png" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
+                        </header>
+                        <img class="img-post img-responsive" src="imgs/5min_editores_texto.png" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
 
-                    <p class="resumo">
-                        <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
-                    tempora,
-                    necessitatibus
-                    inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti
-                    debitis
-                    ipsum officiis rerum.</a>
-                    </p>
+                        <p class="resumo">
+                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
+                        tempora,
+                        necessitatibus
+                     inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti
+                        debitis
+                        ipsum officiis rerum.</a>
+                        </p>
 
-                    <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span
+                        <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span
                         class="glyphicon glyphicon-chevron-right"></span></a>
 
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                         Opções <span class="caret"></span>
-                    </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                        </ul>
+                        </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </section>
                 <hr>
 
                 <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
+                <section class="__pagination" tabindex="3">
+                    <ul class="pager" tabindex="-1">
+                        <li class="previous">
+                            <a href="#">&larr; Older</a>
+                        </li>
+                        <li class="next">
+                            <a href="#">Newer &rarr;</a>
+                        </li>
+                    </ul>
+                </section>
 
             </div>
 
@@ -226,57 +226,61 @@
             <div class="col-md-4">
 
                 <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
+                <section class="__searchbar" tabindex="4">
+                    <div class="well" tabindex="-1">
+                        <h4>Blog Search</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+                            </button>
+                            </span>
+                        </div>
+                        <!-- /.input-group -->
                     </div>
-                    <!-- /.input-group -->
-                </div>
+                </section>
 
                 <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
+                <section class="__categories" tabindex="5">
+                    <div class="well" tabindex="-1">
+                        <h4>Blog Categories</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.col-lg-6 -->
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                    <li><a href="#">Category Name</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.col-lg-6 -->
                         </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
+                        <!-- /.row -->
                     </div>
-                    <!-- /.row -->
-                </div>
-
+                </section>
                 <!-- Side Widget Well -->
                 <div class="well">
                     <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus
+                        laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>
@@ -305,7 +309,124 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        'use strict'
+        var AccessiblePlugin = (function ($) {
+            var keyPressed = function (e) {
+                var code = e.keyCode || e.which;
+                if (code == '9') {
+                    console.log(e.target);
+                }
+            }
+            // define a handler
+            function doc_keyUp(e) {
 
+                // this would test for whichever key is 40 and the ctrl key at the same time
+                if (e.ctrlKey && e.keyCode == 40) {
+                    // call your function to do the thing
+                    pauseSound();
+                }
+            }
+            // register the handler 
+            document.addEventListener('keyup', doc_keyUp, false);
+            var bindFunctions = function () {
+                $('body').on('keyup', keyPressed)
+            };
+
+            var init = function () {
+                bindFunctions();
+            };
+
+            return {
+                init: init
+            };
+        }(jQuery));
+
+        var HistoryNavigation = (function () {
+
+            var privateHistory = [];
+
+            var add = function (object) {
+                privateHistory.push(object);
+            }
+            var removeLast = function () {
+                privateHistory.pop();
+            }
+            var clear = function () {
+                privateHistory = [];
+            }
+            var remove = function (object) {
+                privateHistory = privateHistory.filter(function (el) {
+                    return el.id !== object.id;
+                });
+            }
+
+            return {
+                add: add,
+                remove: remove,
+                removeLast: removeLast,
+                clear: clear
+            }
+        })();
+
+        var Shortcuts = (function ($) {
+            var privateKeys = [];
+
+            var tags = [];
+
+            var createShortcuts = function () {
+                var countMenus = 1;
+
+                tags.forEach(function (tag, indexTagGroup) {
+                    indexTagGroup += 1;
+                    privateKeys[indexTagGroup] = [];
+                    var tagEls = document.querySelectorAll('.' + tag);
+
+                    privateKeys[indexTagGroup].push({
+                        'tag': tag,
+                        'children': []
+                    });
+
+                    var children = tagEls[0].children;
+
+                    privateKeys[indexTagGroup].forEach(function (obj, index) {
+                        if (obj.tag == tag) {
+                            obj.el = tagEls;
+                            obj.shortcut = 'ctrl + ' + countMenus;
+
+                            if (children) {
+                                for (var i = 0; i < children.length; i++) {
+                                    obj.children.push({
+                                        'el': children[i],
+                                        'shortcut': 'ctrl + ' + (i + 1),
+                                    });
+                                }
+                            }
+                        }
+                    });
+                    countMenus++;
+                });
+                console.log("privateKeys");
+                console.log(privateKeys);
+            }
+
+            var init = function (object) {
+                if (object == null) {
+                    tags.push('__posts', '__categories', '__searchbar', '__pagination');
+                } else
+                    tags = object.tags;
+
+                createShortcuts();
+            }
+
+            return {
+                init: init
+            };
+
+        }(jQuery));
+
+        Shortcuts.init();
+    </script>
 </body>
 
 </html>
