@@ -90,4 +90,11 @@ a:active {
     border: 1px solid green;
 }
 
-.link-ace {}
+.link-ace {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}

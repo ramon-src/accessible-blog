@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Testando descrição meta tag">
+    <meta name="description" content="Blog de tecnologia preparado para deficientes visuais">
     <meta name="author" content="">
 
-    <title>Blog | Início | Atalhos em | alt + tab</title>
+    <title>Blog | Início | Atalhos em | alt + a</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,13 +24,13 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-        var focusM = function (el) {
+        var focusEl = function (el) {
             el.focus();
         }
     </script>
 </head>
 
-<body onload="focusM(this)">
+<body onload="focusEl(this)">
 
     <!-- First Blog Post
             LANCE PRA DAOTONICO
@@ -49,8 +49,12 @@
              -->
     <!-- Navigation -->
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" tabindex="1">
-        <div class="container" tabindex="-1">
+    <a class="link-ace" tabindex="1" title="Conhecer atalhos"></a>
+
+    <a class="link-ace" tabindex="2" title="Pular para postagens"></a>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -93,8 +97,8 @@
                     <small>Secondary Text</small>
                 </h1>
 
-                <section class="__posts" tabindex="2">
-                    <div class="post" tabindex="-1">
+                <section class="__posts" id="start-of-content" title="Postagens" tabindex="2" accesskey="1">
+                    <div class="post">
                         <header class="header-post">
                             <span class="date-title">
                             <span>26</span>
@@ -111,7 +115,7 @@
 
 
                         <p class="resumo">
-                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
+                            <a href="#" >Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
                         </p>
 
 
@@ -131,7 +135,7 @@
                         </div>
                     </div>
 
-                    <div class="post" tabindex="-1">
+                    <div class="post">
                         <header class="header-post">
                             <span class="date-title">
                             <span>26</span>
@@ -146,7 +150,7 @@
 
 
                         <p class="resumo">
-                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
+                            <a href="#" >Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
                         </a>
                         </p>
 
@@ -167,7 +171,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="post" tabindex="-1">
+                    <div class="post">
                         <header class="header-post">
                             <span class="date-title">
                             <span>26</span>
@@ -181,7 +185,7 @@
                         <img class="img-post img-responsive" src="imgs/5min_editores_texto.png" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir">
 
                         <p class="resumo">
-                            <a href="#" class="link-ace">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
+                            <a href="#">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
                         tempora,
                         necessitatibus
                      inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti
@@ -209,7 +213,7 @@
                 <hr>
 
                 <!-- Pager -->
-                <section class="__pagination" tabindex="3">
+                <section class="__pagination" title="Paginação" tabindex="3" accesskey="4">
                     <ul class="pager" tabindex="-1">
                         <li class="previous">
                             <a href="#">&larr; Older</a>
@@ -226,7 +230,7 @@
             <div class="col-md-4">
 
                 <!-- Blog Search Well -->
-                <section class="__searchbar" tabindex="4">
+                <section class="__searchbar" title="Barra de pesquisa" tabindex="4"  accesskey="3">
                     <div class="well" tabindex="-1">
                         <h4>Blog Search</h4>
                         <div class="input-group">
@@ -242,13 +246,13 @@
                 </section>
 
                 <!-- Blog Categories Well -->
-                <section class="__categories" tabindex="5">
+                <section class="__categories" title="Categorias" tabindex="5"  accesskey="2">
                     <div class="well" tabindex="-1">
                         <h4>Blog Categories</h4>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#cateogry">Category Name</a>
                                     </li>
                                     <li><a href="#">Category Name</a>
                                     </li>
