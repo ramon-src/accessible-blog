@@ -46,44 +46,15 @@
                 standart atttributes global para acessibilidade
 
                 http://www.adeva.org.br/servicos/acessibilidadedesites.php
+
+                https://webdesign.tutsplus.com/articles/accessibility-basics-designing-for-visual-impairment--cms-27634
              -->
     <!-- Navigation -->
+    <div class="container">
+        <a class="link-ace" tabindex="1" title="Conhecer atalhos"></a>
 
-    <a class="link-ace" tabindex="1" title="Conhecer atalhos"></a>
-
-    <a class="link-ace" tabindex="2" title="Pular para postagens"></a>
-
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-                <a class="navbar-brand" href="#">Tech Blog</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
+        <a class="link-ace" tabindex="2" title="Pular para postagens"></a>
+    </div>
     <!-- Page Content -->
     <div class="container">
 
@@ -97,7 +68,7 @@
                     <small>Secondary Text</small>
                 </h1>
 
-                <section class="__posts" id="start-of-content" title="Postagens" tabindex="2" accesskey="1">
+                <section id="__posts" class="__posts" id="start-of-content" title="Postagens">
                     <div class="post">
                         <header class="header-post">
                             <span class="date-title">
@@ -115,7 +86,7 @@
 
 
                         <p class="resumo">
-                            <a href="#" >Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
+                            <a href="#">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
                         </p>
 
 
@@ -150,7 +121,7 @@
 
 
                         <p class="resumo">
-                            <a href="#" >Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
+                            <a href="#">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis,
                         </a>
                         </p>
 
@@ -213,8 +184,8 @@
                 <hr>
 
                 <!-- Pager -->
-                <section class="__pagination" title="Paginação" tabindex="3" accesskey="4">
-                    <ul class="pager" tabindex="-1">
+                <section id="__pagination" class="__pagination" title="Paginação">
+                    <ul class="pager">
                         <li class="previous">
                             <a href="#">&larr; Older</a>
                         </li>
@@ -230,8 +201,8 @@
             <div class="col-md-4">
 
                 <!-- Blog Search Well -->
-                <section class="__searchbar" title="Barra de pesquisa" tabindex="4"  accesskey="3">
-                    <div class="well" tabindex="-1">
+                <section id="__searchbar" class="__searchbar" title="Barra de pesquisa">
+                    <div class="well">
                         <h4>Blog Search</h4>
                         <div class="input-group">
                             <input type="text" class="form-control">
@@ -246,8 +217,8 @@
                 </section>
 
                 <!-- Blog Categories Well -->
-                <section class="__categories" title="Categorias" tabindex="5"  accesskey="2">
-                    <div class="well" tabindex="-1">
+                <section id="__categories" class="__categories" title="Categorias">
+                    <div class="well">
                         <h4>Blog Categories</h4>
                         <div class="row">
                             <div class="col-lg-6">
@@ -314,122 +285,60 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script>
-        'use strict'
-        var AccessiblePlugin = (function ($) {
-            var keyPressed = function (e) {
-                var code = e.keyCode || e.which;
-                if (code == '9') {
-                    console.log(e.target);
-                }
-            }
-            // define a handler
-            function doc_keyUp(e) {
+              var Accessibility = (function (win, doc) {
 
-                // this would test for whichever key is 40 and the ctrl key at the same time
-                if (e.ctrlKey && e.keyCode == 40) {
-                    // call your function to do the thing
-                    pauseSound();
-                }
-            }
-            // register the handler 
-            document.addEventListener('keyup', doc_keyUp, false);
-            var bindFunctions = function () {
-                $('body').on('keyup', keyPressed)
-            };
+                  var init = (function (doc) {
+                      var _private = {};
+                      var _public = {};
+                      var _config = {
+                          posts: {
+                              id: '__posts',
+                              accesskey: 'u',
+                          },
+                          categories: {
+                              id: '__categories',
+                              accesskey: 'i'
+                          },
+                          searchbar: {
+                              id: '__searchbar',
+                              accesskey: 'o'
+                          },
+                          pagination: {
+                              id: '__pagination',
+                              accesskey: 'p'
+                          }
+                      };
 
-            var init = function () {
-                bindFunctions();
-            };
+                      _private.initAllElements = function () {
+                          _private.posts = doc.getElementById(_config.posts.id);
+                          _private.categories = doc.getElementById(_config.categories.id);
+                          _private.searchbar = doc.getElementById(_config.searchbar.id);
+                          _private.pagination = doc.getElementById(_config.pagination.id);
 
-            return {
-                init: init
-            };
-        }(jQuery));
+                          _private.posts.accesskey = _config.posts.accesskey;
+                          _private.categories.accesskey = _config.categories.accesskey;
+                          _private.searchbar.accesskey = _config.searchbar.accesskey;
+                          _private.pagination.accesskey = _config.pagination.accesskey;
 
-        var HistoryNavigation = (function () {
+                          _private.buildShortcuts();
+                      };
 
-            var privateHistory = [];
+                      _private.initAllElements();
 
-            var add = function (object) {
-                privateHistory.push(object);
-            }
-            var removeLast = function () {
-                privateHistory.pop();
-            }
-            var clear = function () {
-                privateHistory = [];
-            }
-            var remove = function (object) {
-                privateHistory = privateHistory.filter(function (el) {
-                    return el.id !== object.id;
-                });
-            }
+                      _public.setConfig = function (config) {
+                          _config.posts = config.posts || _config.posts;
+                          _config.categories = config.categories || _config.categories;
+                          _config.searchbar = config.searchbar || _config.searchbar;
+                          _config.pagination = config.pagination || _config.pagination;
+                          _private.initAllElements();
+                      };
 
-            return {
-                add: add,
-                remove: remove,
-                removeLast: removeLast,
-                clear: clear
-            }
-        })();
+                      return _public;
+                  })(doc);
 
-        var Shortcuts = (function ($) {
-            var privateKeys = [];
+                  return init;
 
-            var tags = [];
-
-            var createShortcuts = function () {
-                var countMenus = 1;
-
-                tags.forEach(function (tag, indexTagGroup) {
-                    indexTagGroup += 1;
-                    privateKeys[indexTagGroup] = [];
-                    var tagEls = document.querySelectorAll('.' + tag);
-
-                    privateKeys[indexTagGroup].push({
-                        'tag': tag,
-                        'children': []
-                    });
-
-                    var children = tagEls[0].children;
-
-                    privateKeys[indexTagGroup].forEach(function (obj, index) {
-                        if (obj.tag == tag) {
-                            obj.el = tagEls;
-                            obj.shortcut = 'ctrl + ' + countMenus;
-
-                            if (children) {
-                                for (var i = 0; i < children.length; i++) {
-                                    obj.children.push({
-                                        'el': children[i],
-                                        'shortcut': 'ctrl + ' + (i + 1),
-                                    });
-                                }
-                            }
-                        }
-                    });
-                    countMenus++;
-                });
-                console.log("privateKeys");
-                console.log(privateKeys);
-            }
-
-            var init = function (object) {
-                if (object == null) {
-                    tags.push('__posts', '__categories', '__searchbar', '__pagination');
-                } else
-                    tags = object.tags;
-
-                createShortcuts();
-            }
-
-            return {
-                init: init
-            };
-
-        }(jQuery));
-
-        Shortcuts.init();
+              })(window, document);
     </script>
 </body>
 
