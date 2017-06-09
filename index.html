@@ -314,9 +314,9 @@
         try {
             if (window.addEventListener) {
                 window.addEventListener("keydown", onKeyDown, true);
-            } else if (document.attachEvent) { // IE 
+            } else if (window.addEventListener) { // IE 
                 alert(document);
-                document.attachEvent("onkeydown", onKeyDown);
+                window.addEventListener("onkeydown", onKeyDown);
             } else {
                 document.addEventListener("keydown", onKeyDown, true);
             }
