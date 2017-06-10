@@ -6,11 +6,11 @@
 
 
 /*
-#007F4B
+#007F4B   #E8C52B
 #32FFAB
 #00FF97
 #347F61
-#00CC79
+#00CC79   #FFF23C
 */
 
 body {
@@ -19,28 +19,44 @@ body {
     color: #484848;
 }
 
+.background-header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background: url("http://st.gde-fon.com/wallpapers_original/377313_velosiped_shlem_bereg_brevna_2560x1600_www.Gde-Fon.com.jpg") no-repeat center;
+    background-size: cover;
+}
+
 footer {
     margin: 50px 0;
 }
 
+.content-section{
+    margin-top: 100px;
+    padding: 20px 45px;
+    background-color: #fff;
+}
+
 .post {
-    border: 1px solid #d9d9d9;
-    padding: 15px;
+    padding: 10px;
     margin: 20px 0px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
 }
 
 .btn-green {
-    background: #00CC79;
+    background: #FFF23C;
     color: #fff;
 }
 
 .btn-green:hover {
     color: #fff;
-    background: #007F4B;
+    background: #E8C52B;
 }
 
 .header-post {
-    background: #00CC79;
+    background: #FFCE5E;
     display: table;
     width: 100%;
     min-height: 100px;
@@ -53,6 +69,7 @@ footer {
     display: table-cell;
     vertical-align: middle;
     color: #fff;
+    text-shadow: 2px 2px #E8C52B;
 }
 .title .resumo{
     font-size: initial;
@@ -65,7 +82,7 @@ footer {
     font-size: 1.5em;
 }
 .date-title {
-    background: #007F4B;
+    background: #E8C52B;
     color: #fff;
     width: 80px;
     border-right: 5px solid #fff;
