@@ -61,11 +61,20 @@
 
              -->
 
-    <div class="background-header"></div>
-    <div class="container-fluid">
+    <header class="header">
+        <div class="wrapper">
+            <div class="__img">
+                <img src="imgs/presentationimg.jpg" alt="" class="img-circle img-responsive">
+            </div>
+            <div  class="__bio">
+                <p>Eu sou <b>Ramon</b>, criei este blog porque quero <b>MUITO</b> compartilhar minha experiência com você!</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <header id="__header" title="Menu rápido" tabindex="-1">
+                <header id="__shortcuts" title="Menu rápido" tabindex="-1">
                     <a class="link-ace" tabindex="1" title="Conhecer atalhos" href="#"></a>
                     <a class="link-ace" tabindex="2" title="Ir para postagens" href="#"></a>
                     <a class="link-ace" tabindex="3" title="Ir para categorias" href="#"></a>
@@ -75,7 +84,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-lg-offset-2 content-section">
+            <div class="col-md-8 content-section">
                 <h1 class="page-header">
                     Urban Bikes
                     <small>Tudo sobre ciclismo urbano!</small>
@@ -261,7 +270,7 @@
             //     CTRL   +   SHIFT
             if (e.ctrlKey && e.shiftKey) {
                 if (key == hotNum.one)
-                    document.getElementById('__header').focus();
+                    document.getElementById('__shortcuts').focus();
                 if (key == hotNum.two)
                     document.getElementById('__posts').focus();
                 if (key == hotNum.three)
