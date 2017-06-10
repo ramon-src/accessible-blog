@@ -47,13 +47,23 @@ footer {
 }
 
 .title {
+    position: relative;
     font-size: 2.3em;
     padding-left: 10px;
     display: table-cell;
     vertical-align: middle;
     color: #fff;
 }
-
+.title .resumo{
+    font-size: initial;
+    margin-right: 100px;
+}
+.readmore-icon{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    font-size: 1.5em;
+}
 .date-title {
     background: #007F4B;
     color: #fff;
@@ -97,4 +107,8 @@ a:active {
     margin: 0;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
+}
+*:focus{
+    color: inherit;
+    border: 1px solid green;
 }

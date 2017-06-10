@@ -90,33 +90,19 @@
                             <span>2017</span>
                             </span>
                             <span class="title">
-                            <a href="#" alt="Introdução ao Docker">Introdução ao Docker</a>
-                        </span>
+                                <a href="#" alt="Introdução ao Docker">Introdução ao Docker</a>
+                                <p class="resumo">
+                                    <a href="#">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
+                                </p>
+                                <a class="readmore-icon" href="/2017-05-26-introducaodocker.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                            </span>
                         </header>
 
-                        <img class="img-post img-responsive" src="imgs/back_estrutura_html.jpg" alt="Introdução ao Docker, enter para entrar no post ou tab para seguir"
-                        />
-
-
-                        <p class="resumo">
-                            <a href="#">Resumo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora,</a>
-                        </p>
-
-
-                        <a class="btn btn-green" href="/2017-05-26-introducaodocker.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                                Opções <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Categorias</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Barra de Pesquisa</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Atalhos</a></li>
-                            </ul>
-                        </div>
+                        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
+                        <a class="link-ace" title="Ir para postagens" href="#"></a>
+                        <a class="link-ace" title="Ir para categorias" href="#"></a>
+                        <a class="link-ace" title="Ir para barra de pesquisa" href="#"></a>
+                        <a class="link-ace" title="Ir para paginação" href="#"></a>
                     </div>
 
                     <div class="post">
@@ -289,11 +275,12 @@
     <script>
         /*
                 Type: Standart Basic Latin decimal
+                                   number - keyCode           
                 Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
                 Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
             */
         var hotNum = { zero: 48, one: 49, two: 50, three: 51, four: 52, five: 53, six: 54, seven: 55, eight: 56, nine: 57 }
-        
+
         var onKeyDown = function (e) {
             var key = e.keyCode || e.charCode || e.which;
             //     CTRL   +   SHIFT
@@ -310,7 +297,7 @@
                     document.getElementById('__pagination').focus();
             }
         }
-        
+
         try {
             if (window.addEventListener) {
                 window.addEventListener("keydown", onKeyDown, true);
