@@ -29,7 +29,7 @@ html, body, button, input, textarea{
 
 body {
     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    color: #484848;
+    color: #3A4250;
     background-color: #F1F4F5;
 }
 
@@ -71,6 +71,22 @@ body {
     text-shadow: 2px 0px 4px rgba(58,66,80,1);
 }
 
+.__search{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0px;
+    padding: 8px 15px;
+    outline: 0;
+    border: 0;
+}
+
+.well{
+    margin: 15px 0px;
+    color:#3A4250;
+    background-color:  #fff;
+    border: 0px;
+}
+
 footer {
     margin: 50px 0;
 }
@@ -99,7 +115,7 @@ footer {
 }
 
 .header-post {
-    background: #FFCE5E;
+    background: #fff;
     display: table;
     width: 100%;
     min-height: 100px;
@@ -111,8 +127,6 @@ footer {
     padding-left: 10px;
     display: table-cell;
     vertical-align: middle;
-    color: #fff;
-    text-shadow: 2px 2px #E8C52B;
 }
 .title .resumo{
     font-size: initial;
@@ -125,7 +139,7 @@ footer {
     font-size: 1.5em;
 }
 .date-title {
-    background: #E8C52B;
+    background: #3A4250;
     color: #fff;
     width: 80px;
     border-right: 5px solid #fff;
@@ -135,7 +149,9 @@ footer {
     font-family: 'Lucida Sans', sans-serif;
     vertical-align: middle;
 }
+.category-img{
 
+}
 .img-post {
     margin-bottom: 15px;
 }

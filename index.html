@@ -10,10 +10,8 @@
 
     <title>Bem Vindo ao Blog</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link href="css/blog-home.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -66,7 +64,7 @@
             <div class="__img">
                 <img src="imgs/presentationimg.jpg" alt="" class="img-circle img-responsive">
             </div>
-            <div  class="__bio">
+            <div class="__bio">
                 <p>Eu sou <b>Ramon</b>, criei este blog porque quero <b>MUITO</b> compartilhar minha experiência com você!</p>
             </div>
         </div>
@@ -85,25 +83,22 @@
         </div>
         <div class="row">
             <div class="col-md-8 content-section">
-                <h1 class="page-header">
-                    Urban Bikes
-                    <small>Tudo sobre ciclismo urbano!</small>
-                </h1>
-
                 <section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
                     <div class="post" tabindex="0">
                         <header class="header-post">
+                            <div class="category-img">
+                                <img src="" class="__img" alt="HTML5">
+                            </div>
                             <span class="date-title">
-                            <span>26</span>
-                            <span>Maio</span>
-                            <span>2017</span>
+                                <span>26</span>
+                                <span>Maio</span>
+                                <span>2017</span>
                             </span>
                             <span class="title">
-                                <a href="#" alt="Kit básico para ciclistas urbanos">Kit básico para ciclistas urbanos</a>
+                                <a href="#" alt="Kit básico para ciclistas urbanos">1. Estrutura</a>
                                 <p class="resumo">
                                     <a href="#">
-                                        Resumo: Tudo que você precisa para que os imprevistos na viagem para o trabalho ou passeio
-                                         não te tomem tempo
+                                        Resumo: Entenda <b>O QUÊ É</b> e como se estrutura uma <b>página web</b>.
                                     </a>
                                 </p>
                                 <a class="readmore-icon" href="/2017-05-26-introducaodocker.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -111,10 +106,10 @@
                         </header>
 
                         <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-                        <a class="link-ace" title="Ir para postagens" href="#"></a>
-                        <a class="link-ace" title="Ir para categorias" href="#"></a>
-                        <a class="link-ace" title="Ir para barra de pesquisa" href="#"></a>
-                        <a class="link-ace" title="Ir para paginação" href="#"></a>
+                        <a class="link-ace" title="Pular para postagens" href="#"></a>
+                        <a class="link-ace" title="Pular para categorias" href="#"></a>
+                        <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
+                        <a class="link-ace" title="Pular para paginação" href="#"></a>
                     </div>
 
                     <div class="post" tabindex="0">
@@ -166,7 +161,6 @@
                 </section>
                 <hr>
 
-                <!-- Pager -->
                 <section id="__pagination" class="__pagination" title="Paginação">
                     <ul class="pager">
                         <li class="previous">
@@ -182,80 +176,62 @@
 
 
             <aside class="col-md-4">
+
                 <section id="__searchbar" class="__searchbar" title="Barra de pesquisa" tabindex="-1">
-                    <div class="well">
-                        <h4>Blog Search</h4>
-                        <div class="input-group">
-                            <input type="text" class="form-control">
-                            <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                            </span>
-                        </div>
-                    </div>
+                    <input type="text" class="form-control __search" placeholder="Procurar...">
                 </section>
 
-                <!-- Blog Categories Well -->
                 <section id="__categories" class="__categories" title="Categorias" tabindex="-1">
                     <div class="well">
-                        <h4>Blog Categories</h4>
+                        <h4>Categorias</h4>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled">
-                                    <li><a href="#cateogry">Category Name</a>
+                                    <li><a href="#cateogry">Git</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">PHP</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">Orientação a Objetos</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">Padrões de projeto</a>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.col-lg-6 -->
                             <div class="col-lg-6">
                                 <ul class="list-unstyled">
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">JavaScript</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">Docker</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">Config Ambientes</a>
                                     </li>
-                                    <li><a href="#">Category Name</a>
+                                    <li><a href="#">HTML5</a>
+                                    </li>
+                                    <li><a href="#">CSS3</a>
                                     </li>
                                 </ul>
                             </div>
-                            <!-- /.col-lg-6 -->
                         </div>
-                        <!-- /.row -->
                     </div>
                 </section>
             </aside>
         </div>
-        <!-- /.row -->
 
         <hr>
 
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Your Website 2014</p>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
         </footer>
 
     </div>
-    <!-- /.container -->
 
-    <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
     <script>
         /*
                 Type: Standart Basic Latin decimal
