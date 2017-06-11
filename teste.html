@@ -2,13 +2,12 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Blog de tecnologia preparado para deficientes visuais">
 
-    <title>Bem Vindo ao Blog</title>
+    <title>{{ page.title }}</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +20,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-        var focusEl = function (el) {
+        var focusEl = function(el) {
             el.focus();
         }
     </script>
@@ -91,8 +90,8 @@
                             </div>
                             <span class="date-title">
                                 <span>26</span>
-                                <span>Maio</span>
-                                <span>2017</span>
+                            <span>Maio</span>
+                            <span>2017</span>
                             </span>
                             <span class="title">
                                 <a href="#" alt="Kit básico para ciclistas urbanos">1. Estrutura</a>
@@ -110,53 +109,6 @@
                         <a class="link-ace" title="Pular para categorias" href="#"></a>
                         <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
                         <a class="link-ace" title="Pular para paginação" href="#"></a>
-                    </div>
-
-                    <div class="post" tabindex="0">
-                        <header class="header-post">
-                            <span class="date-title">
-                            <span>26</span>
-                            <span>Maio</span>
-                            <span>2017</span>
-                            </span>
-                            <span class="title">
-                                <a href="#" alt="Dicas para andar no trânsito">Dicas para andar no trânsito</a>
-                                <p class="resumo">
-                                    <a href="#">
-                                        Resumo: Sugestões valiosas para por em prática e aumentar sua segurança quando estiver transitando na faixa. 
-                                    </a>
-                                </p>
-                                <a class="readmore-icon" href="/2017-05-26-introducaodocker.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                            </span>
-                        </header>
-
-                        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-                        <a class="link-ace" title="Ir para postagens" href="#"></a>
-                        <a class="link-ace" title="Ir para categorias" href="#"></a>
-                        <a class="link-ace" title="Ir para barra de pesquisa" href="#"></a>
-                        <a class="link-ace" title="Ir para paginação" href="#"></a>
-                    </div>
-                    <div class="post" tabindex="0">
-                        <header class="header-post">
-                            <span class="date-title">
-                            <span>26</span>
-                            <span>Maio</span>
-                            <span>2017</span>
-                            </span>
-                            <span class="title">
-                                <a href="#" alt="Iluminação por que é importante?">Iluminação por que é importante?</a>
-                                <p class="resumo">
-                                    <a href="#">Resumo: Entenda o quão importante estar sempre bem iluminado!</a>
-                                </p>
-                                <a class="readmore-icon" href="/2017-05-26-introducaodocker.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                            </span>
-                        </header>
-
-                        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-                        <a class="link-ace" title="Ir para postagens" href="#"></a>
-                        <a class="link-ace" title="Ir para categorias" href="#"></a>
-                        <a class="link-ace" title="Ir para barra de pesquisa" href="#"></a>
-                        <a class="link-ace" title="Ir para paginação" href="#"></a>
                     </div>
                 </section>
                 <hr>
@@ -231,17 +183,28 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <script>
         /*
-                Type: Standart Basic Latin decimal
-                                   number - keyCode           
-                Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
-                Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
-            */
-        var hotNum = { zero: 48, one: 49, two: 50, three: 51, four: 52, five: 53, six: 54, seven: 55, eight: 56, nine: 57 }
+                                                                        Type: Standart Basic Latin decimal
+                                                                                           number - keyCode           
+                                                                        Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
+                                                                        Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
+                                                                    */
+        var hotNum = {
+            zero: 48,
+            one: 49,
+            two: 50,
+            three: 51,
+            four: 52,
+            five: 53,
+            six: 54,
+            seven: 55,
+            eight: 56,
+            nine: 57
+        }
 
-        var onKeyDown = function (e) {
+        var onKeyDown = function(e) {
             var key = e.keyCode || e.charCode || e.which;
             //     CTRL   +   SHIFT
             if (e.ctrlKey && e.shiftKey) {
@@ -272,9 +235,9 @@
         }
 
 
-        var Accessibility = (function (win, doc) {
+        var Accessibility = (function(win, doc) {
 
-            var init = (function (doc) {
+            var init = (function(doc) {
                 var _private = {};
                 var _public = {};
                 var _config = {
@@ -296,7 +259,7 @@
                     }
                 };
 
-                _private.initAllElements = function () {
+                _private.initAllElements = function() {
                     _private.posts = doc.getElementById(_config.posts.id);
                     _private.categories = doc.getElementById(_config.categories.id);
                     _private.searchbar = doc.getElementById(_config.searchbar.id);
@@ -311,7 +274,7 @@
 
                 _private.initAllElements();
 
-                _public.setConfig = function (config) {
+                _public.setConfig = function(config) {
                     _config.posts = config.posts || _config.posts;
                     _config.categories = config.categories || _config.categories;
                     _config.searchbar = config.searchbar || _config.searchbar;

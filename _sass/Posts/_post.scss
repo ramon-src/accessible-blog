@@ -1,0 +1,24 @@
+.__posts {}
+
+.post {
+    position: relative;
+    padding: 10px;
+    margin: 20px 0px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+}.header-post {
+    background: #fff;
+    display: table;
+    width: 100%;
+    min-height: 100px;.title {
+        position: relative;
+        font-size: 1.5em;
+        padding-left: 10px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .title .resumo {
+        font-size: initial;
+        margin-right: 100px;
+    }
+}

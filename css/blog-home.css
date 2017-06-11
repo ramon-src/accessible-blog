@@ -98,6 +98,7 @@ footer {
 }
 
 .post {
+    position: relative;
     padding: 10px;
     margin: 20px 0px;
     border: 1px solid #d9d9d9;
@@ -123,7 +124,7 @@ footer {
 
 .title {
     position: relative;
-    font-size: 2.3em;
+    font-size: 1.5em;
     padding-left: 10px;
     display: table-cell;
     vertical-align: middle;
@@ -135,7 +136,7 @@ footer {
 .readmore-icon{
     position: absolute;
     right: 5px;
-    bottom: 10px;
+    bottom: 20%;
     font-size: 1.5em;
 }
 .date-title {
