@@ -1,19 +1,19 @@
 <div class="col-md-8 content-section">
     <section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
         {% for post in site.posts %}
-        <div class="post" tabindex="0">
+        <div class="post-resume" tabindex="0">
             <header class="header-post">
                 <div class="category-img">
-                    <img src="{{ post.category,img-url }}" class="__img" alt="HTML5"/>
+                    <img src="imgs/logo-{{ post.category }}-orange.png" class="__img" alt="{{ post.category }}"/>
                 </div>
                 <span class="title">
                     <a href="#" alt="{{ post.title }}">{{ post.title }}</a>
-                        <p class="resumo">
+                        <p class="resume">
                             <a href="#">
                                 Resumo: {{ post.resume }}
                             </a>
                         </p>
-                        <a class="readmore-icon" href="{{ post.url }}">
+                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}">
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
                 </span>

@@ -23,6 +23,8 @@ baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://ramonschmidt.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ramon-src
 github_username:  ramon-src
+sass:
+  style: compressed
 
 # Build settings
 markdown: kramdown

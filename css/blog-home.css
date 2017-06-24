@@ -133,12 +133,6 @@ footer {
     font-size: initial;
     margin-right: 100px;
 }
-.readmore-icon{
-    position: absolute;
-    right: 5px;
-    bottom: 20%;
-    font-size: 1.5em;
-}
 .date-title {
     background: #3A4250;
     color: #fff;

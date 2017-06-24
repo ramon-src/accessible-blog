@@ -4,28 +4,9 @@
         <div class="row">
             <div class="col-lg-6">
                 <ul class="list-unstyled">
-                    <li><a href="#cateogry">Git</a>
-                    </li>
-                    <li><a href="#">PHP</a>
-                    </li>
-                    <li><a href="#">Orientação a Objetos</a>
-                    </li>
-                    <li><a href="#">Padrões de projeto</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <ul class="list-unstyled">
-                    <li><a href="#">JavaScript</a>
-                    </li>
-                    <li><a href="#">Docker</a>
-                    </li>
-                    <li><a href="#">Config Ambientes</a>
-                    </li>
-                    <li><a href="#">HTML5</a>
-                    </li>
-                    <li><a href="#">CSS3</a>
-                    </li>
+                {% for category in site.categories %}
+                    <li><a href="#cateogry">{{ category | first }} </a></li>
+                {% endfor %}
                 </ul>
             </div>
         </div>
