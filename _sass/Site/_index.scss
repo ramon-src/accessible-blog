@@ -1,0 +1,48 @@
+html, body, button, input, textarea {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: $elements;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  color: $elements;
+  background-color: $background-gray;
+}
+
+
+a {
+  color: inherit;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid green;
+}
+
+.link-ace {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+*:focus{
+  color: inherit;
+  border: 1px solid green;
+}
+
+.well{
+  margin: 15px 0px;
+  color:#3A4250;
+  background-color:  #fff;
+  border: 0px;
+}

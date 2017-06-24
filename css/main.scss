@@ -1,8 +1,11 @@
 ---
 ---
+@import "Site/variables";
 
 @import "Site/index";
-@import "Site/variables";
+@import "Site/header";
+@import "Site/footer";
+@import "Site/searchbar";
 
 @import "Posts/list";
 @import "Posts/post";
