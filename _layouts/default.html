@@ -10,8 +10,7 @@
     <title>{{ page.title }}</title>
 
     <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/css/blog-home.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"> 
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +27,9 @@
     {% include shortcutHeader.html %}
 
     <div class="row">
-        {% include postList.html %}
+        <div class="col-md-8 content-section">
+        {{ content }}
+        </div>
         <aside class="col-md-4">
             {% include searchbar.html %} {% include categories.html %}
         </aside>
@@ -38,8 +39,8 @@
 </div>
 
 
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery.js"></script>
+<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
 
 <script>
     /*

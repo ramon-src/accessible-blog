@@ -1,12 +1,11 @@
-<div class="col-md-8 content-section">
-    <section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
-        {% for post in site.posts %}
-        <div class="post-resume" tabindex="0">
-            <header class="header-post">
-                <div class="category-img">
-                    <img src="imgs/logo-{{ post.category }}-orange.png" class="__img" alt="{{ post.category }}"/>
-                </div>
-                <span class="title">
+<section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
+    {% for post in paginator.posts %}
+    <div class="post-resume" tabindex="0">
+        <header class="header-post">
+            <div class="category-img">
+                <img src="assets/imgs/logo-{{ post.category }}-orange.png" class="__img" alt="{{ post.category }}"/>
+            </div>
+            <span class="title">
                     <a href="#" alt="{{ post.title }}">{{ post.title }}</a>
                         <p class="resume">
                             <a href="#">
@@ -17,24 +16,12 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
                 </span>
-            </header>
-            <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-            <a class="link-ace" title="Pular para postagens" href="#"></a>
-            <a class="link-ace" title="Pular para categorias" href="#"></a>
-            <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
-            <a class="link-ace" title="Pular para paginação" href="#"></a>
-        </div>
-        {% endfor %}
-    </section>
-
-    <section id="__pagination" class="__pagination" title="Paginação">
-        <ul class="pager">
-            <li class="previous">
-                <a href="#">&larr; Anterior</a>
-            </li>
-            <li class="next">
-                <a href="#">Próximo &rarr;</a>
-            </li>
-        </ul>
-    </section>
-</div>
+        </header>
+        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
+        <a class="link-ace" title="Pular para postagens" href="#"></a>
+        <a class="link-ace" title="Pular para categorias" href="#"></a>
+        <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
+        <a class="link-ace" title="Pular para paginação" href="#"></a>
+    </div>
+    {% endfor %}
+</section>
