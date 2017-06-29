@@ -3,7 +3,8 @@
     <div class="post-resume" tabindex="0">
         <header class="header-post">
             <div class="category-img">
-                <img src="assets/imgs/logo-{{ post.category }}-orange.png" class="__img" alt="{{ post.category }}"/>
+                <img src="assets/imgs/{{ post.category }}.png" class="__img" alt="{{ post.category }}"
+                     title="{{ post.category }}"/>
             </div>
             <span class="title">
                     <a href="#" alt="{{ post.title }}">{{ post.title }}</a>
@@ -17,11 +18,15 @@
                         </a>
                 </span>
         </header>
-        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-        <a class="link-ace" title="Pular para postagens" href="#"></a>
-        <a class="link-ace" title="Pular para categorias" href="#"></a>
-        <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
-        <a class="link-ace" title="Pular para paginação" href="#"></a>
+        <button>
+            <a class="link-ace" title="Conhecer atalhos" href="#"></a>
+            <a class="link-ace" title="Pular para postagens" href="#"></a>
+            <a class="link-ace" title="Pular para categorias" href="#"></a>
+            <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
+            <a class="link-ace" title="Pular para paginação" href="#"></a>
+            <a class="link-ace" title="Ir para a tela inicial" href="#"></a>
+        </button>
+
     </div>
     {% endfor %}
 </section>

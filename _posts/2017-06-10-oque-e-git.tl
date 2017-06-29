@@ -1,15 +1,14 @@
 ---
 layout: post
 title:  "Git: O que é?"
-resume: "Tenha todos seus projetos, faculdade, pessoais em diversos repositórios com fácil
-acesso e versionamento!"
-date:   2017-06-10 00:51:02 -0300
-category: git
+resume: "Tenha todos seus projetos, faculdade, pessoais em diversos repositórios com fácil acesso e versionamento!"
+date:   "2017-06-10 00:51:02 -0300"
+category: "git"
 ---
 
 <h2>{{ page.title }}</h2>
 
-Bom acho interessante começar o conteúdo com algumas pergutinhas.
+Bom acho interessante começar o conteúdo com algumas perguntinhas.
 
 <h3>O que é git?</h3>
 Git é um sistema de controle de versão distribuído.
@@ -38,5 +37,3 @@ Ok, foi entendido que precisamos criar cada um desses elementos. Pois então, ca
 * Opa, precisou adicionar uns estilos pra deixar a listagem massa!? Versão número 3!!!
 
 *Conclusão:* Desta maneira temos muito controle sobre pequenas partes, e isso é muito bom pois traz impactos muito pequenos quando sentimos a necessidade de voltar alguma versão específica do sistema!
-
-<h3></h3>

@@ -1,0 +1,23 @@
+<section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
+
+    {% for post in site.categories[page.category] %}
+
+    <div class="post-resume" tabindex="0">
+        <header class="header-post">
+            <span class="title">
+                <a href="#" alt="{{ post.title }}">
+                    <time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: site.dateformat }}</time> : {{ post.title }}
+                </a>
+                <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </span>
+        </header>
+        <a class="link-ace" title="Conhecer atalhos" href="#"></a>
+        <a class="link-ace" title="Pular para postagens" href="#"></a>
+        <a class="link-ace" title="Pular para categorias" href="#"></a>
+        <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
+        <a class="link-ace" title="Pular para paginação" href="#"></a>
+    </div>
+    {% endfor %}
+</section>

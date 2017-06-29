@@ -49,12 +49,12 @@
      Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
      Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
      */
-    var hotNum = {zero: 48, one: 49, two: 50, three: 51, four: 52, five: 53, six: 54, seven: 55, eight: 56, nine: 57}
+    var hotNum = {zero: 48, one: 49, two: 50, three: 51, four: 52, five: 53, six: 54, seven: 55, eight: 56, nine: 57, backslash: 92}
 
     var onKeyDown = function (e) {
         var key = e.keyCode || e.charCode || e.which;
         //     CTRL   +   SHIFT
-        if (e.ctrlKey && e.shiftKey) {
+        if (e.ctrlKey && e.altKey) {
             if (key == hotNum.one)
                 document.getElementById('__shortcuts').focus();
             if (key == hotNum.two)
@@ -72,7 +72,6 @@
         if (window.addEventListener) {
             window.addEventListener("keydown", onKeyDown, true);
         } else if (window.addEventListener) { // IE
-            alert(document);
             window.addEventListener("onkeydown", onKeyDown);
         } else {
             document.addEventListener("keydown", onKeyDown, true);
@@ -80,61 +79,6 @@
     } catch (e) {
         alert(e);
     }
-
-
-    var Accessibility = (function (win, doc) {
-
-        var init = (function (doc) {
-            var _private = {};
-            var _public = {};
-            var _config = {
-                posts: {
-                    id: '__posts',
-                    accesskey: 'u',
-                },
-                categories: {
-                    id: '__categories',
-                    accesskey: 'i'
-                },
-                searchbar: {
-                    id: '__searchbar',
-                    accesskey: 'o'
-                },
-                pagination: {
-                    id: '__pagination',
-                    accesskey: 'p'
-                }
-            };
-
-            _private.initAllElements = function () {
-                _private.posts = doc.getElementById(_config.posts.id);
-                _private.categories = doc.getElementById(_config.categories.id);
-                _private.searchbar = doc.getElementById(_config.searchbar.id);
-                _private.pagination = doc.getElementById(_config.pagination.id);
-
-                _private.posts.accesskey = _config.posts.accesskey;
-                _private.categories.accesskey = _config.categories.accesskey;
-                _private.searchbar.accesskey = _config.searchbar.accesskey;
-                _private.pagination.accesskey = _config.pagination.accesskey;
-
-            };
-
-            _private.initAllElements();
-
-            _public.setConfig = function (config) {
-                _config.posts = config.posts || _config.posts;
-                _config.categories = config.categories || _config.categories;
-                _config.searchbar = config.searchbar || _config.searchbar;
-                _config.pagination = config.pagination || _config.pagination;
-                _private.initAllElements();
-            };
-
-            return _public;
-        })(doc);
-
-        return init;
-
-    })(window, document);
 </script>
 </body>
 
