@@ -40,7 +40,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-
+  - config.ru
+  - vendor
 textile_ext: "textile,txtl,tl"
 paginate: 7
 paginate_path: "/blog/pagina:num/"
