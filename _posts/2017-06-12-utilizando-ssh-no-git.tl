@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Git: O que é?"
-resume: "Tenha todos seus projetos, faculdade, pessoais em diversos repositórios com fácil acesso e versionamento!"
+title:  "Git: Utilizando ssh no git!"
+resume: "Ta tomando um pau com ssh? Ta utilizando só HTTP e tá um saco? Junta aqui que é uma barbada!"
 date:   "2017-06-10 00:51:02 -0300"
 category: "git"
 ---

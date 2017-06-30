@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Git: O que é?"
-resume: "Tenha todos seus projetos, faculdade, pessoais em diversos repositórios com fácil acesso e versionamento!"
+title:  "Git: Boas práticas!"
+resume: "Bora fazer direito o versionamento!"
 date:   "2017-06-10 00:51:02 -0300"
 category: "git"
 ---

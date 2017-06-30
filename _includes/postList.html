@@ -3,30 +3,22 @@
     <div class="post-resume" tabindex="0">
         <header class="header-post">
             <div class="category-img">
-                <img src="assets/imgs/{{ post.category }}.png" class="__img" alt="{{ post.category }}"
+                <img src="{{ site.baseurl }}/assets/imgs/{{ post.category }}.png" class="__img" alt="{{ post.category }}"
                      title="{{ post.category }}"/>
             </div>
-            <span class="title">
-                    <a href="#" alt="{{ post.title }}">{{ post.title }}</a>
+            <span class="post-content">
+                    <a class="title" href="#" alt="{{ post.title }}"><b>{{ post.title }}</b></a>
                         <p class="resume">
                             <a href="#">
                                 Resumo: {{ post.resume }}
                             </a>
                         </p>
-                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}" title="Ir para o post">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
                         </a>
-                </span>
+            </span>
+              <a href="#__shortcuts" class="link-ace" title="Atalhos: ctrl, alt,  2 para postagens, 3 para categorias, 4 para pesquisa, 5 para paginação, 1 para voltar neste menu,  v para voltar para página inicial"></a>
         </header>
-        <button>
-            <a class="link-ace" title="Conhecer atalhos" href="#"></a>
-            <a class="link-ace" title="Pular para postagens" href="#"></a>
-            <a class="link-ace" title="Pular para categorias" href="#"></a>
-            <a class="link-ace" title="Pular para barra de pesquisa" href="#"></a>
-            <a class="link-ace" title="Pular para paginação" href="#"></a>
-            <a class="link-ace" title="Ir para a tela inicial" href="#"></a>
-        </button>
-
     </div>
     {% endfor %}
 </section>

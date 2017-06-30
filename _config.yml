@@ -42,5 +42,5 @@ exclude:
   - Gemfile.lock
 
 textile_ext: "textile,txtl,tl"
-paginate: 5
+paginate: 7
 paginate_path: "/blog/pagina:num/"

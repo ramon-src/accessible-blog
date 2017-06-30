@@ -1,23 +1,23 @@
-<section id="__pagination" class="__pagination" title="Paginação">
+<div id="__pagination" title="Paginação">
     <ul class="pager">
         {% if paginator.previous_page %}
-        <li class="previous">
+        <li class="previous" title="Página anterior">
             <a href="{{ paginator.previous_page_path }}">&larr; Anterior</a>
         </li>
         {% else %}
-        <li class="previous">
+        <li class="previous"  title="Não há página anterior a essa">
             <span>&larr; Anterior</span>
         </li>
         {% endif %}
-        <span class="page_number ">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+        <span class="page_number" title="Página: {{ paginator.page }} de {{ paginator.total_pages }}">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
         <li class="next">
             <a href="{{ paginator.next_page_path }}">Próximo &rarr;</a>
         </li>
         {% else %}
-        <li class="next">
+        <li class="next"  title="Não há próxima página">
             <span>Próximo &rarr;</span>
         </li>
         {% endif %}
     </ul>
-</section>
+</div>

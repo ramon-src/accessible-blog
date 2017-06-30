@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Git: O que é?"
-resume: "Tenha todos seus projetos, faculdade, pessoais em diversos repositórios com fácil acesso e versionamento!"
+title:  "Vue: Não está conseguindo utilizar AJAX?"
+resume: "Vou te dar o queijo e a faca o que tu acha?"
 date:   "2017-06-10 00:51:02 -0300"
-category: "git"
+category: "vue"
 ---
 
 <h2>{{ page.title }}</h2>
 
-Bom acho interessante começar o conteúdo com algumas perguntinhas.
+Bom acho interessante começar o conteúdo com algumas pergutinhas.
 
 <h3>O que é git?</h3>
 Git é um sistema de controle de versão distribuído.
@@ -30,7 +30,7 @@ Precisamos criar a Listagem dos posts, beleza então vamos dividir ela em pequen
 
 A listagem dos posts é constituída por uma lista, onde esta lista possui linhas e cada linha possui o post resumidamente com uma imagem referente a ele, título, data, e resumo...
 
-Foi entendido que precisamos criar cada um desses elementos. Pois então, cada elemento que tu criar se tornará em uma versão do sistema.
+Ok, foi entendido que precisamos criar cada um desses elementos. Pois então, cada elemento que tu criar se tornará em uma versão do sistema.
 
 * Criou a estrutura da lista sem os posts? Beleza temos a primeira versão!
 * Criou o bloco onde entrará o resumo do post? Versão número 2!

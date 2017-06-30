@@ -1,18 +1,18 @@
-
+/*
+  display: table;*/
 .header {
-  display: table;
   width: 100%;
   height: 216px;
   padding: 48px 0px;
   color: $white;
   background-color: $default;
-
+/*
   .wrapper {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 64px;
   }
-
+*/
   .__img {
     display: table-cell;
     vertical-align: top;

@@ -22,13 +22,15 @@
     display: table;
     width: 100%;
 
-    .title {
+    .post-content {
       position: relative;
       font-size: 1.5em;
       padding-left: 10px;
       display: table-cell;
       vertical-align: middle;
-
+      .title{
+        color: $default-shadow;
+      }
       .resume {
         font-size: initial;
         margin-right: 100px;
@@ -42,6 +44,12 @@
     bottom: 20%;
     font-size: 1.5em;
   }
+  .readmore-icon-categories{
+    position: relative;
+    float: right;
+    font-size: 1.5em;
+    line-height: 0px;
+    }
 }
 
 
