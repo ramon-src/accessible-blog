@@ -14,7 +14,6 @@ Bom acho interessante começar o conteúdo com algumas perguntinhas.
 Git é um sistema de controle de versão distribuído.
 
 <h3>O que é uma <b>Versão</b> de um sistema?</h3>
-Resumidamente, toda alteração que tu faz em um projeto seria uma versão do seu sistema.
 
 Agora que você entendeu superficialmente, irei explicar com exemplos mais consistentes abaixo, confere aí!
 
