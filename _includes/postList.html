@@ -13,9 +13,11 @@
                                 Resumo: {{ post.resume }}
                             </a>
                         </p>
-                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}" title="Ir para o post">
+                        <span title="Ir para o post">
+                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}" >
                             <i class="glyphicon glyphicon-chevron-right"></i>
                         </a>
+                        </span>
             </span>
               <a href="#__shortcuts" class="link-ace" title="Atalhos: ctrl, alt,  2 para postagens, 3 para categorias, 4 para pesquisa, 5 para paginação, 1 para cabeçalho de referências,  v para voltar para página inicial"></a>
         </header>

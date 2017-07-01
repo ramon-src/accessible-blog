@@ -5,7 +5,7 @@
             <div class="col-lg-6">
                 <ul class="list-unstyled">
                 {% for category in site.categories %}
-                    <li><a href="{{ site.baseurl }}/categoria/{{ category | first | slugify }}">{{ category | first | capitalize }} </a></li>
+                    <li><a title="Categoria" href="{{ site.baseurl }}/categoria/{{ category | first | slugify }}">{{ category | first | capitalize }} </a></li>
                 {% endfor %}
                 </ul>
             </div>
