@@ -44,4 +44,5 @@ exclude:
   - vendor
 textile_ext: "textile,txtl,tl"
 paginate: 7
+baseurl: "/blog"
 paginate_path: "/blog/pagina:num/"
