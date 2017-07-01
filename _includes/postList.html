@@ -1,6 +1,6 @@
-<section id="__posts" class="__posts" id="start-of-content" title="Postagens" tabindex="-1">
+<section id="__posts" class="__posts" title="Postagens" tabindex="-1">
     {% for post in paginator.posts %}
-    <div class="post-resume" tabindex="0">
+    <div class="post-resume" title="Resumo do post" tabindex="0">
         <header class="header-post">
             <div class="category-img">
                 <img src="{{ site.baseurl }}/assets/imgs/{{ post.category }}.png" class="__img" alt="{{ post.category }}"
@@ -17,7 +17,7 @@
                             <i class="glyphicon glyphicon-chevron-right"></i>
                         </a>
             </span>
-              <a href="#__shortcuts" class="link-ace" title="Atalhos: ctrl, alt,  2 para postagens, 3 para categorias, 4 para pesquisa, 5 para paginação, 1 para voltar neste menu,  v para voltar para página inicial"></a>
+              <a href="#__shortcuts" class="link-ace" title="Atalhos: ctrl, alt,  2 para postagens, 3 para categorias, 4 para pesquisa, 5 para paginação, 1 para cabeçalho de referências,  v para voltar para página inicial"></a>
         </header>
     </div>
     {% endfor %}

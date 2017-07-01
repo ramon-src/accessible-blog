@@ -69,8 +69,14 @@
             if (e.ctrlKey && e.altKey) {
                 if (key == hotNum.one)
                     document.getElementById('__shortcuts').focus();
-                if (key == hotNum.two)
-                    document.getElementById('__posts').focus();
+                if (key == hotNum.two){
+                    var posts = document.getElementById('__posts');
+                    if(posts === null){
+                        document.getElementById('__post').focus();
+                    }else{
+                        posts.focus();
+                    }
+                }
                 if (key == hotNum.three)
                     document.getElementById('__categories').focus();
                 if (key == hotNum.four)
