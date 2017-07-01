@@ -10,14 +10,13 @@
                     <a class="title" href="#" alt="{{ post.title }}"><b>{{ post.title }}</b></a>
                         <p class="resume">
                             <a href="#">
-                                Resumo: {{ post.resume }}
+                                <span class="resume-span">Resumo: </span>{{ post.resume }}
                             </a>
                         </p>
-                        <span title="Ir para o post">
-                        <a class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}" >
-                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        <a title="Ir para o post" class="readmore-icon" href="{{ post.url | prepend:site.baseurl }}" tabindex="-1"></a>
+                        <a href="{{ post.url | prepend:site.baseurl }}" title="Ir para o post" class="readmore-icon" >
+                            <i alt="Ir para post" class="glyphicon glyphicon-chevron-right"></i>
                         </a>
-                        </span>
             </span>
               <a href="#__shortcuts" class="link-ace" title="Atalhos: ctrl, alt,  2 para postagens, 3 para categorias, 4 para pesquisa, 5 para paginação, 1 para cabeçalho de referências,  v para voltar para página inicial"></a>
         </header>

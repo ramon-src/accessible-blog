@@ -1,4 +1,8 @@
-html, body, button, input, textarea {
+html,
+body,
+button,
+input,
+textarea {
   font-weight: 400;
   font-size: 16px;
   font-family: "open_sansregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,8 +16,10 @@ body {
   /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
   color: $elements;
   background-color: $background-gray;
+  @media (max-width: $max-wid-sm) {
+    padding-top: 50px;
+  }
 }
-
 
 a {
   color: inherit;
@@ -27,13 +33,14 @@ a {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-*:focus{
+
+*:focus {
   color: inherit;
 }
 
-.well{
+.well {
   margin: 15px 0px;
-  color:#3A4250;
-  background-color:  #fff;
+  color: #3A4250;
+  background-color: #fff;
   border: 0px;
 }

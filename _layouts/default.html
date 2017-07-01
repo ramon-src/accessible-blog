@@ -27,10 +27,13 @@
         {% include shortcutHeader.html %}
 
         <div class="row">
-            <div class="col-md-8 content-section">
+            <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                {% include searchbar.html %}
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 content-section">
                 {{ content }}
             </div>
-            <aside class="col-md-4">
+            <aside class="col-md-4 hidden-xs hidden-sm">
                 {% include searchbar.html %} {% include categories.html %}
             </aside>
         </div>

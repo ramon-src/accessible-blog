@@ -28,7 +28,7 @@
 
              -->
 
-<header class="header">
+<header class="header hidden-xs hidden-sm">
     <div class="container">
         <div class="col-lg-8">
             <div class="wrapper">
@@ -47,3 +47,36 @@
         </div>
     </div>
 </header>
+<nav class="navbar navbar-default navbar-fixed-top visible-xs visible-sm">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            <a href="{{ site.baseurl }}/" class="navbar-brand" title="Voltar para página inicial">
+                <img src="{{ site.baseurl }}/assets/imgs/presentationimg.jpg" class="img-circle">
+            </a>
+            <p class="navbar-text">Blog</p>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categorias <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        {% for category in site.categories %}
+                        <li><a title="Categoria" href="{{ site.baseurl }}/categoria/{{ category | first | slugify }}">{{ category | first | capitalize }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
