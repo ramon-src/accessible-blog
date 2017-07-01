@@ -2,7 +2,7 @@
     <ul class="pager">
         {% if paginator.previous_page %}
         <li class="previous" title="Página anterior">
-            <a href="{{ paginator.previous_page_path }}">&larr; Anterior</a>
+            <a href="{{site.baseurl}}{{ paginator.previous_page_path }}">&larr; Anterior</a>
         </li>
         {% else %}
         <li class="previous"  title="Não há página anterior a essa">
@@ -12,7 +12,7 @@
         <span class="page_number" title="Página: {{ paginator.page }} de {{ paginator.total_pages }}">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
         <li class="next">
-            <a href="{{ paginator.next_page_path }}">Próximo &rarr;</a>
+            <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Próximo &rarr;</a>
         </li>
         {% else %}
         <li class="next"  title="Não há próxima página">
