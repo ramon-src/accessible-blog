@@ -28,7 +28,9 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
-                {% include searchbar.html %}
+                <section class="__searchbar" title="Barra de pesquisa" tabindex="-1">
+                    <input type="text" class="form-control __search" placeholder="Procurar...">
+                </section>
             </div>
             <div class="col-md-8 col-sm-12 col-xs-12 content-section">
                 {{ content }}
@@ -46,11 +48,11 @@
 
     <script>
         /*
-             Type: Standart Basic Latin decimal
-             number - keyCode
-             Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
-             Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
-             */
+                     Type: Standart Basic Latin decimal
+                     number - keyCode
+                     Numbers (0 to 9): [0 - 48, 1 - 49, 2 - 50, 3 - 51, 4 - 52, 5 - 53, 6 - 54, 7 - 55, 8 - 56, 9 - 57]
+                     Site: http://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec
+                     */
         var hotNum = {
             zero: 48,
             one: 49,
@@ -72,11 +74,12 @@
             if (e.ctrlKey && e.altKey) {
                 if (key == hotNum.one)
                     document.getElementById('__shortcuts').focus();
-                if (key == hotNum.two){
+                if (key == hotNum.two) {
                     var posts = document.getElementById('__posts');
-                    if(posts === null){
+                    if (posts === null) {
                         document.getElementById('__post').focus();
-                    }else{
+                    }
+                    else {
                         posts.focus();
                     }
                 }
@@ -87,7 +90,7 @@
                 if (key == hotNum.five)
                     document.getElementById('__pagination').focus();
                 if (key == hotNum.v)
-                    window.location = '/';
+                    window.location = '/blog/';
             }
         }
 

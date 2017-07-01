@@ -1,5 +1,5 @@
-<div id="__pagination" class="__pagination" title="Paginação">
-    <ul class="pager">
+<div id="__pagination" class="__pagination" title="Paginação" tabindex="-1">
+    <ul class="pager" tabindex="0">
         {% if paginator.previous_page %}
         <li class="previous" title="Página anterior">
             <a href="{{site.baseurl}}{{ paginator.previous_page_path }}">&larr; <span class="hidden-xs hidden-sm">Anterior</span><span class="hidden-md hidden-lg">Ante</span></a>
