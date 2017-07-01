@@ -1,22 +1,22 @@
-<div id="__pagination" title="Paginação">
+<div id="__pagination" class="__pagination" title="Paginação">
     <ul class="pager">
         {% if paginator.previous_page %}
         <li class="previous" title="Página anterior">
-            <a href="{{site.baseurl}}{{ paginator.previous_page_path }}">&larr; Anterior</a>
+            <a href="{{site.baseurl}}{{ paginator.previous_page_path }}">&larr; <span class="hidden-xs hidden-sm">Anterior</span><span class="hidden-md hidden-lg">Ante</span></a>
         </li>
         {% else %}
-        <li class="previous"  title="Não há página anterior a essa">
-            <span>&larr; Anterior</span>
+        <li class="previous disabled"  title="Não há página anterior a essa">
+           <span class="hidden-xs hidden-sm">&larr; Anterior</span><span class="hidden-md hidden-lg">&larr; Ante</span>
         </li>
         {% endif %}
-        <span class="page_number" title="Página: {{ paginator.page }} de {{ paginator.total_pages }}">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+        <span class="page-number" title="Página: {{ paginator.page }} de {{ paginator.total_pages }}">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
         <li class="next">
-            <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Próximo &rarr;</a>
+            <a href="{{ site.baseurl }}{{ paginator.next_page_path }}"><span class="hidden-xs hidden-sm">Próximo</span><span class="hidden-md hidden-lg">Próx</span> &rarr;</a>
         </li>
         {% else %}
-        <li class="next"  title="Não há próxima página">
-            <span>Próximo &rarr;</span>
+        <li class="next disabled"  title="Não há próxima página">
+            <span class="hidden-xs hidden-sm">Próximo &rarr;</span><span class="hidden-md hidden-lg">Próx &rarr;</span>
         </li>
         {% endif %}
     </ul>
